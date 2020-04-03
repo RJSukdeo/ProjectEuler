@@ -9,18 +9,19 @@ public class Problem3 {
 
     public static void main(String[] args) {
         long input = 600851475143L;
-        long maxPrime = 0;
         long counter = 0;
         while(!isPrime(input)) {
             counter++;
             if (isPrime(counter)) {
                 while (input % counter == 0) {
                     input = input/counter;
-                    maxPrime = Math.max(maxPrime, counter);
+                    if (isPrime(input)) {
+                        break;
+                    }
                 }
             }
         }
-        System.out.println("Max Prime: " + Math.max(maxPrime, input));
+        System.out.println("Max Prime: " + input);
     }
 
     private static boolean isPrime(long number) {
