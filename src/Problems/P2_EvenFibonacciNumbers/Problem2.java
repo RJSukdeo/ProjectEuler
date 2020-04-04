@@ -1,4 +1,4 @@
-package Problems.Problem2;
+package Problems.P2_EvenFibonacciNumbers;
 
 import java.util.ArrayList;
 import java.util.List;

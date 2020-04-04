@@ -1,4 +1,4 @@
-package Problems.Problem1;
+package Problems.P1_MultiplesOf3And5;
 
 import java.util.HashSet;
 import java.util.Set;

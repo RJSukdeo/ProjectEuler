@@ -1,4 +1,4 @@
-package Problems.Problem4;
+package Problems.P4_LargestPalindromeProduct;
 
 import java.util.ArrayList;
 import java.util.List;
