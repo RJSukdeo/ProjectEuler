@@ -5,6 +5,9 @@ package Problems.P5_SmallestMultiple;
 //
 //What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 
+// Note
+// Do not need divisors below 11, larger numbers (11....20) are composed of the numbers (1...10).
+
 public class Problem5 {
 
     private static final int[] DIVISORS = new int[]{11, 12, 13, 14, 15, 16, 17, 18, 19, 20};;

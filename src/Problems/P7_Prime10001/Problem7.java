@@ -4,6 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 //Question
+//By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
+//
+//What is the 10 001st prime number?
+
+// Note
+// If divisible by any already discovered primes then number cannot be prime.
+// If not divisible by any discovered primes you can start the exhaustive search at the highest prime + 1.
 public class Problem7 {
 
     private static final int MAX_NO_PRIMES = 10001;
@@ -14,7 +21,6 @@ public class Problem7 {
         PRIMES.add(2);
         while (PRIMES.size() < MAX_NO_PRIMES) {
             if (isPrime(counter)) {
-                System.out.println("Added prime: " + counter);
                 PRIMES.add(counter);
             }
             counter+=2;
@@ -29,7 +35,7 @@ public class Problem7 {
         if (!PRIMES.isEmpty() && isDivisibleByKnownPrimes(input)) {
             return false;
         }
-        int startCounter = PRIMES.isEmpty() ? 2: PRIMES.get(PRIMES.size() - 1);
+        int startCounter = PRIMES.isEmpty() ? 2: PRIMES.get(PRIMES.size() - 1) + 1;
         for (int i = startCounter; i <= input; i++) {
             if ((input % i == 0) && (i != input)) {
                 return false;
